@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--this names the tab-->
+    <title>PawFect Match Adoption Form</title>
+</head>
+<body>
+    <!--this is giving your page a header-->
+    <header>
+        <img src="images/adoptMe.jpeg" alt="adoptMePic" height="100">
+        <h1>PawFect Match</h1>
+        <h3>Pet Adoption Form</h3>
+    </header>
+    <!--here we start our main structure-->
+    <main>
+        <form><!--Include "Form" to let html know youre creating a form structure-->
+
+        <label for="name">Name:</label><!--make sure to copy all of this b/c we will need it in CSS-->
+        <input type="text" id="name" name="name" placeholder="John Doe" required><br><!--br just means Break(\n)-->
+
+        <!--placeholder will display an EX. on the page-->
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required><br><!--when using type make sure to pick the correct one look them up on ChatGpt.-->
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com"><br>
+        
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" placeholder="123 Main St" required><br>
+
+        <p>Are you 18 years or older?
+        <label>
+            <input type="radio" name="age" value="yes">Yes
+        </label>
+        <label>
+            <input type="radio" name="age" value="no">No
+        </label>
+        </p>
+
+        <p>Application fee:  $45</p>
+
+        <input type="submit" value="Submit">
+
+        </form>
+
+
+    </main>
+    <!--this starts the footer-->
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
+<!---->
+<!--^thats how you make a comment. also below ill include other documentation-->
+<!--
+-make sure to ident where needed bec html will not work if you dont
+-make sure to be very picky with syntax bec most of the time html WILL NOT throw an error it just wont work but will still run
+-also html is case sensitive
+-before yall ask about making it to where it checks for stuff like numbers and emails. this will need js which is for a later time
+
+
+
+
+
+
+
+-->
