@@ -1,3 +1,57 @@
-article {
-    column-count: 2;
+/*here we start our css. notice that we didnot need any prior or pre-set code*/
+/*here the way to call html things is by calling the parent methode that you used*/
+/*example here we used artical in html. everything inside html will be called and placed into whatever it is youre doing*/
+/*here i made it to where picture will be on the left side and the information is on the right side*/
+/* Main card layout */
+.pet-card {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* LEFT SIDE */
+.image-section {
+    width: 400px;
+}
+
+#mainImage {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumbnails img {
+    width: 80px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+/* RIGHT SIDE */
+.pet-info {
+    flex: 1;
+}
+
+.adopt-button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.adopt-button:hover {
+    background-color: #45a049;
 }

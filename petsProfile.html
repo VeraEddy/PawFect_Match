@@ -7,25 +7,40 @@
     <link rel="stylesheet" href="styles/petsProfile.css">
 </head>
 <body>
-    <article>
-        <!--here we will add a picture on the left side. left side will have pets description-->
-        <img src="images/dog.jpeg" alt="dog">
-        <h1>Adopt Me!!!</h1>
+    <article class="pet-card">
+
+    <!-- LEFT SIDE: Images -->
+    <div class="image-section">
+        <img id="mainImage" src="images/dog.jpeg" alt="petImage">
+
+        <div class="thumbnails">
+            <img src="images/dog.jpeg" onclick="changeImage(this)">
+            <img src="images/dog2.jpeg" onclick="changeImage(this)">
+            <img src="images/dog3.jpeg" onclick="changeImage(this)">
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE Description-->
+    <div class="pet-info">
         <h1>Description</h1>
         <ul>
-            <li>name</li>
+            <li>Name</li>
             <li>Gender</li>
             <li>Age</li>
             <li>Breed</li>
             <li>Weight</li>
             <li>Trained</li>
-            <li>inside/outside pet</li>
-            <li>Friendly/not friendly</li>
-            <li>energetic/lazy</li>
-            <li>up-to-date Vacinations</li>
-            <li>medicl conditions/special diets</li>
+            <li>Inside/Outside Pet</li>
+            <li>Friendly/Not Friendly</li>
+            <li>Energetic/Lazy</li>
+            <li>Up-to-date Vaccinations</li>
+            <li>Medical Conditions/Special Diets</li>
             <li>Past History</li>
         </ul>
-    </article>
+
+        <button class="adopt-button">Adopt Me</button>
+    </div>
+</article>
+<script src="scripts/petsProfile.js"></script>
 </body>
 </html>
