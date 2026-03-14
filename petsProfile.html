@@ -2,61 +2,64 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Product Page</title>
-
+<title>Dog Detail Page</title>
 <link rel="stylesheet" href="styles/petsProfile.css">
-
 </head>
 
 <body>
-<!-- ---- Header (matches form.html header style) ---- -->
-    <header>
-        <img src="images/adoptMe.jpeg" alt="PawFect Match logo">
-        <h1>PawFect Match</h1>
-    </header>
+<!-- ---- Header ---- -->
+<header>
+    <img src="images/adoptMe.jpeg" alt="PawFect Match logo">
+    <h1>PawFect Match</h1>
+</header>
 
-    <!-- ---- the navigation bar (sits below the logo/header) ---- -->
-    <!-- pages that aren't built yet use # as a placeholder href -->
-    <nav>
-        <ul>
-            <li><a href="homePage.html" class="active">Home</a></li>
-            <li><a href="Find_Your_Pet.html">Find Your Pet</a></li>
-            <li><a href="form.html">Adoption Form</a></li>
-            <li><a href="#">Nutrition</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </nav>
-<div class="container">
+<!-- ---- Navigation bar ---- -->
+<nav>
+    <ul>
+        <li><a href="homePage.html" class="active">Home</a></li>
+        <li><a href="Find_Your_Pet.html">Find Your Pet</a></li>
+        <li><a href="form.html">Adoption Form</a></li>
+        <li><a href="#">Nutrition</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</nav>
+
+<!-- ---- Dynamic Dog Card ---- -->
+<div id="dog1" class="container">
     <!-- LEFT SIDE IMAGE -->
     <div class="image-section">
-        <img id="productImage" src="/images/dog.jpeg" alt="pets image">
+        <img id="productImage" src="" alt="Dog image">
         <div class="buttons">
             <button onclick="prevImage()">Previous</button>
             <button onclick="nextImage()">Next</button>
         </div>
     </div>
+
     <!-- RIGHT SIDE DESCRIPTION -->
     <div class="description">
-        <h2>Discription</h2>
+        <h2>Description</h2>
         <ul>
-            <li>Name</li>
-            <li>Breed</li>
-            <li>Size</li>
-            <li>Gender</li>
-            <li>price</li>
+            <li>Name: <span id="dogName"></span></li>
+            <li>Breed: <span id="dogBreed"></span></li>
+            <li>Size: <span id="dogSize"></span></li>
+            <li>Gender: <span id="dogGender"></span></li>
+            <li>Price: <span id="dogPrice"></span></li>
         </ul>
+        <p id="dogDesc"></p>
     </div>
 </div>
 
-<!--button-->
+<!-- ---- Adopt Button ---- -->
 <a href="/form.html">
   <h1 class="adoptbutton">Adopt Me!</h1>
 </a>
+
 <script src="/scripts/petsProfile.js"></script>
-</body>
-<!--this is footer-->
+
+<!-- Footer -->
 <footer>
     <p>© 2025 PawFect Match &nbsp;|&nbsp; Made with love for animals everywhere</p>
 </footer>
+</body>
 </html>
