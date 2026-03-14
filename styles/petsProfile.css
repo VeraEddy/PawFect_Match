@@ -1,57 +1,129 @@
-/*here we start our css. notice that we didnot need any prior or pre-set code*/
-/*here the way to call html things is by calling the parent methode that you used*/
-/*example here we used artical in html. everything inside html will be called and placed into whatever it is youre doing*/
-/*here i made it to where picture will be on the left side and the information is on the right side*/
-/* Main card layout */
-.pet-card {
+/* ---- Navigation Bar ---- */
+nav {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    gap: 40px;
-    align-items: flex-start;
+    gap: 4px;
 }
 
-/* LEFT SIDE */
-.image-section {
-    width: 400px;
+nav ul li a {
+    display: block;
+    padding: 14px 18px;
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 3px solid transparent; /* placeholder for active indicator */
+    transition: color 0.2s, border-color 0.2s;
 }
 
-#mainImage {
-    width: 100%;
-    border-radius: 12px;
+/* highlight the current page link */
+nav ul li a:hover,
+nav ul li a.active {
+    color: blue;
+    border-bottom-color: orange;
 }
 
-.thumbnails {
+/* ---- Header (copied from form.css so it looks identical) ---- */
+header {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: white;
+    border-bottom: 1px solid #ddd;
 }
 
-.thumbnails img {
-    width: 80px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: transform 0.2s ease;
+header img {
+    width: 130px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.thumbnails img:hover {
-    transform: scale(1.1);
+header h1 {
+    margin-left: 20px;
+    font-size: 28px;
+    line-height: 1.2;
 }
 
-/* RIGHT SIDE */
-.pet-info {
-    flex: 1;
+/* ---- Section headings ---- */
+h2 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 20px;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    /* same gradient as the rest of the site */
+    background: linear-gradient(to top, orange, white);
+    color: #222;
+    min-height: 100vh;
 }
 
-.adopt-button {
-    margin-top: 20px;
-    padding: 12px 20px;
+
+/* Page layout */
+.container{
+    display: flex;
+    padding: 40px;
+}
+
+/* Image section */
+.image-section{
+    width: 50%;
+    text-align: center;
+}
+
+.image-section img{
+    width: 90%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Buttons */
+.buttons{
+    margin-top: 15px;
+}
+
+button{
+    padding: 10px 20px;
     font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 8px;
+    margin: 5px;
     cursor: pointer;
 }
 
-.adopt-button:hover {
-    background-color: #45a049;
+/* Description section */
+.description{
+    width: 50%;
+    padding: 20px;
+}
+
+.description ul{
+    font-size: 18px;
+    line-height: 1.8;
+}
+.adoptbutton{
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border: 2px solid black;
+    padding: 10px;
+    background-color: orange;
+    margin: auto;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #555;
 }

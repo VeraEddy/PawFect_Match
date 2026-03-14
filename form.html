@@ -8,15 +8,28 @@
     <link rel="stylesheet" href="styles/form.css">
 </head>
     <body>
-        <!--this is giving your page a header-->
-        <header>
-            <img src="images/adoptMe.jpeg" alt="adoptMePic" height="100">
-            <h1>PawFect Match</h1>
-        </header>
+        <!-- ---- Header (matches form.html header style) ---- -->
+    <header>
+        <img src="images/adoptMe.jpeg" alt="PawFect Match logo">
+        <h1>PawFect Match</h1>
+    </header>
+
+    <!-- ---- the navigation bar (sits below the logo/header) ---- -->
+    <!-- pages that aren't built yet use # as a placeholder href -->
+    <nav>
+        <ul>
+            <li><a href="homePage.html" class="active">Home</a></li>
+            <li><a href="Find_Your_Pet.html">Find Your Pet</a></li>
+            <li><a href="form.html">Adoption Form</a></li>
+            <li><a href="#">Nutrition</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
         <!--here we start our main structure-->
         <h2>Pet Adoption Form</h2>
         <main>
-            <form onsubmit="return confirmSubmit()"></formonsubmit><!--Include "Form" to let html know youre creating a form structure-->
+            <form onsubmit="return confirmSubmit()"></formonsubmit><!--This help think to js-->
 
             <label for="name">Name:</label><!--make sure to copy all of this b/c we will need it in CSS-->
             <input type="text" id="name" name="name" placeholder="John Doe" required><br><!--br just means Break(\n)-->

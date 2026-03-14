@@ -1,46 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pets Profile</title>
-    <link rel="stylesheet" href="styles/petsProfile.css">
+<meta charset="UTF-8">
+<title>Dog Detail Page</title>
+<link rel="stylesheet" href="styles/petsProfile.css">
 </head>
+
 <body>
-    <article class="pet-card">
+<!-- ---- Header ---- -->
+<header>
+    <img src="images/adoptMe.jpeg" alt="PawFect Match logo">
+    <h1>PawFect Match</h1>
+</header>
 
-    <!-- LEFT SIDE: Images -->
+<!-- ---- Navigation bar ---- -->
+<nav>
+    <ul>
+        <li><a href="homePage.html" class="active">Home</a></li>
+        <li><a href="Find_Your_Pet.html">Find Your Pet</a></li>
+        <li><a href="form.html">Adoption Form</a></li>
+        <li><a href="#">Nutrition</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</nav>
+
+<!-- ---- Dynamic Dog Card ---- -->
+<div id="dog1" class="container">
+    <!-- LEFT SIDE IMAGE -->
     <div class="image-section">
-        <img id="mainImage" src="images/dog.jpeg" alt="petImage">
-
-        <div class="thumbnails">
-            <img src="images/dog.jpeg" onclick="changeImage(this)">
-            <img src="images/dog2.jpeg" onclick="changeImage(this)">
-            <img src="images/dog3.jpeg" onclick="changeImage(this)">
+        <img id="productImage" src="" alt="Dog image">
+        <div class="buttons">
+            <button onclick="prevImage()">Previous</button>
+            <button onclick="nextImage()">Next</button>
         </div>
     </div>
 
-    <!-- RIGHT SIDE Description-->
-    <div class="pet-info">
-        <h1>Description</h1>
+    <!-- RIGHT SIDE DESCRIPTION -->
+    <div class="description">
+        <h2>Description</h2>
         <ul>
-            <li>Name</li>
-            <li>Gender</li>
-            <li>Age</li>
-            <li>Breed</li>
-            <li>Weight</li>
-            <li>Trained</li>
-            <li>Inside/Outside Pet</li>
-            <li>Friendly/Not Friendly</li>
-            <li>Energetic/Lazy</li>
-            <li>Up-to-date Vaccinations</li>
-            <li>Medical Conditions/Special Diets</li>
-            <li>Past History</li>
+            <li>Name: <span id="dogName"></span></li>
+            <li>Breed: <span id="dogBreed"></span></li>
+            <li>Size: <span id="dogSize"></span></li>
+            <li>Gender: <span id="dogGender"></span></li>
+            <li>Price: <span id="dogPrice"></span></li>
         </ul>
-
-        <button class="adopt-button">Adopt Me</button>
+        <p id="dogDesc"></p>
     </div>
-</article>
-<script src="scripts/petsProfile.js"></script>
+</div>
+
+<!-- ---- Adopt Button ---- -->
+<a href="/form.html">
+  <h1 class="adoptbutton">Adopt Me!</h1>
+</a>
+
+<script src="/scripts/petsProfile.js"></script>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 PawFect Match &nbsp;|&nbsp; Made with love for animals everywhere</p>
+</footer>
 </body>
 </html>
