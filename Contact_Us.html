@@ -37,7 +37,6 @@
             <!-- ---- Left: Contact Info Cards ---- -->
             <div class="info-column">
 
-                <!-- Location -->
                 <div class="info-card">
                     <div class="info-icon">📍</div>
                     <div class="info-text">
@@ -47,7 +46,6 @@
                     </div>
                 </div>
 
-                <!-- Phone -->
                 <div class="info-card">
                     <div class="info-icon">📞</div>
                     <div class="info-text">
@@ -58,7 +56,6 @@
                     </div>
                 </div>
 
-                <!-- Email -->
                 <div class="info-card">
                     <div class="info-icon">✉️</div>
                     <div class="info-text">
@@ -68,7 +65,6 @@
                     </div>
                 </div>
 
-                <!-- Social Media -->
                 <div class="info-card">
                     <div class="info-icon">🐾</div>
                     <div class="info-text">
@@ -82,50 +78,56 @@
             </div>
 
             <!-- ---- Right: Contact Form ---- -->
-            <!-- this form lets visitors send a message directly -->
             <div class="form-column">
                 <div class="contact-form-card">
                     <h3>Send Us a Message</h3>
 
-                    <!-- Name -->
-                    <div class="field-group">
-                        <label for="contact-name">Name:</label>
-                        <input type="text" id="contact-name" name="contact-name" placeholder="Jane Doe" required>
+                    <!-- success message: hidden by default, shown by JS after submit -->
+                    <div id="success-message" class="success-box" style="display: none;">
+                        <div class="success-icon">🐾</div>
+                        <h3>Message Sent!</h3>
+                        <p>Thanks for reaching out! We will get back to you within 1 to 2 business days.</p>
+                        <!-- lets the visitor go back and send another message -->
+                        <button onclick="resetForm()" class="reset-btn">Send Another Message</button>
                     </div>
 
-                    <!-- Email -->
-                    <div class="field-group">
-                        <label for="contact-email">Email:</label>
-                        <input type="email" id="contact-email" name="contact-email" placeholder="example@email.com" required>
-                    </div>
+                    <!-- the form, given an id so JS can hide and reset it -->
+                    <form id="contact-form" onsubmit="handleSubmit(event)">
 
-                    <!-- Phone (optional) -->
-                    <div class="field-group">
-                        <label for="contact-phone">Phone (optional):</label>
-                        <input type="tel" id="contact-phone" name="contact-phone" placeholder="123-456-7890">
-                    </div>
+                        <div class="field-group">
+                            <label for="contact-name">Name:</label>
+                            <input type="text" id="contact-name" name="contact-name" placeholder="Jane Doe" required>
+                        </div>
 
-                    <!-- Subject -->
-                    <div class="field-group">
-                        <label for="contact-subject">Subject:</label>
-                        <!-- a select lets visitors pick a category for their message -->
-                        <select id="contact-subject" name="contact-subject">
-                            <option value="">Select a topic...</option>
-                            <option value="adoption">Adoption Inquiry</option>
-                            <option value="volunteer">Volunteering</option>
-                            <option value="donate">Donations</option>
-                            <option value="general">General Question</option>
-                        </select>
-                    </div>
+                        <div class="field-group">
+                            <label for="contact-email">Email:</label>
+                            <input type="email" id="contact-email" name="contact-email" placeholder="example@email.com" required>
+                        </div>
 
-                    <!-- Message -->
-                    <div class="field-group">
-                        <label for="contact-message">Message:</label>
-                        <!-- textarea gives more room for longer messages -->
-                        <textarea id="contact-message" name="contact-message" rows="5" placeholder="Write your message here..."></textarea>
-                    </div>
+                        <div class="field-group">
+                            <label for="contact-phone">Phone (optional):</label>
+                            <input type="tel" id="contact-phone" name="contact-phone" placeholder="123-456-7890">
+                        </div>
 
-                    <input type="submit" value="Send Message">
+                        <div class="field-group">
+                            <label for="contact-subject">Subject:</label>
+                            <select id="contact-subject" name="contact-subject">
+                                <option value="">Select a topic...</option>
+                                <option value="adoption">Adoption Inquiry</option>
+                                <option value="volunteer">Volunteering</option>
+                                <option value="donate">Donations</option>
+                                <option value="general">General Question</option>
+                            </select>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="contact-message">Message:</label>
+                            <textarea id="contact-message" name="contact-message" rows="5" placeholder="Write your message here..."></textarea>
+                        </div>
+
+                        <input type="submit" value="Send Message">
+
+                    </form>
                 </div>
             </div>
 
@@ -160,6 +162,28 @@
     <footer>
         <p>© 2025 PawFect Match &nbsp;|&nbsp; Made with love for animals everywhere</p>
     </footer>
+
+    <script>
+        // runs when the visitor clicks Send Message
+        function handleSubmit(event) {
+            // stops the page from reloading, which is the default form behavior
+            event.preventDefault();
+
+            // hide the form and show the success message in its place
+            document.getElementById('contact-form').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+        }
+
+        // runs when visitor clicks "Send Another Message"
+        function resetForm() {
+            // wipe all the field values back to blank
+            document.getElementById('contact-form').reset();
+
+            // swap the panels back: hide success, show form
+            document.getElementById('success-message').style.display = 'none';
+            document.getElementById('contact-form').style.display = 'block';
+        }
+    </script>
 
 </body>
 </html>
