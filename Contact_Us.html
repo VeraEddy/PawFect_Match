@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--this names the tab-->
+    <title>PawFect Match - Contact Us</title>
+    <link rel="stylesheet" href="styles/Contact_Us.css">
+</head>
+<body>
+
+    <!-- ---- Header (matches the rest of the site) ---- -->
+    <header>
+        <img src="images/adoptMe.jpeg" alt="PawFect Match logo">
+        <h1>PawFect Match</h1>
+    </header>
+
+    <!-- ---- Navigation Bar (sits below the logo/header) ---- -->
+    <nav>
+        <ul>
+            <li><a href="homePage.html">Home</a></li>
+            <li><a href="Find_Your_Pet.html">Find Your Pet</a></li>
+            <li><a href="form.html">Adoption Form</a></li>
+            <li><a href="#">Nutrition</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="Contact_Us.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- ---- Page Title ---- -->
+    <h2>Contact Us</h2>
+    <p class="subtitle">We would love to hear from you! Reach out with any questions about adoptions, volunteering, or our animals.</p>
+
+    <main>
+        <div class="contact-layout">
+
+            <!-- ---- Left: Contact Info Cards ---- -->
+            <div class="info-column">
+
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <div class="info-text">
+                        <h3>Our Location</h3>
+                        <p>4821 Paw Print Lane</p>
+                        <p>Houston, TX 77002</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <div class="info-text">
+                        <h3>Phone</h3>
+                        <p>(713) 555-0194</p>
+                        <p class="hours-note">Mon - Sat: 9:00 AM to 6:00 PM</p>
+                        <p class="hours-note">Sunday: 11:00 AM to 4:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">✉️</div>
+                    <div class="info-text">
+                        <h3>Email</h3>
+                        <p>adopt@pawfectmatch.org</p>
+                        <p>volunteer@pawfectmatch.org</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🐾</div>
+                    <div class="info-text">
+                        <h3>Follow Us</h3>
+                        <p>Instagram: @PawFectMatchHTX</p>
+                        <p>Facebook: PawFect Match Houston</p>
+                        <p>TikTok: @PawFectMatchHTX</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ---- Right: Contact Form ---- -->
+            <div class="form-column">
+                <div class="contact-form-card">
+                    <h3>Send Us a Message</h3>
+
+                    <!-- success message: hidden by default, shown by JS after submit -->
+                    <div id="success-message" class="success-box" style="display: none;">
+                        <div class="success-icon">🐾</div>
+                        <h3>Message Sent!</h3>
+                        <p>Thanks for reaching out! We will get back to you within 1 to 2 business days.</p>
+                        <!-- lets the visitor go back and send another message -->
+                        <button onclick="resetForm()" class="reset-btn">Send Another Message</button>
+                    </div>
+
+                    <!-- the form, given an id so JS can hide and reset it -->
+                    <form id="contact-form" onsubmit="handleSubmit(event)">
+
+                        <div class="field-group">
+                            <label for="contact-name">Name:</label>
+                            <input type="text" id="contact-name" name="contact-name" placeholder="Jane Doe" required>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="contact-email">Email:</label>
+                            <input type="email" id="contact-email" name="contact-email" placeholder="example@email.com" required>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="contact-phone">Phone (optional):</label>
+                            <input type="tel" id="contact-phone" name="contact-phone" placeholder="123-456-7890">
+                        </div>
+
+                        <div class="field-group">
+                            <label for="contact-subject">Subject:</label>
+                            <select id="contact-subject" name="contact-subject">
+                                <option value="">Select a topic...</option>
+                                <option value="adoption">Adoption Inquiry</option>
+                                <option value="volunteer">Volunteering</option>
+                                <option value="donate">Donations</option>
+                                <option value="general">General Question</option>
+                            </select>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="contact-message">Message:</label>
+                            <textarea id="contact-message" name="contact-message" rows="5" placeholder="Write your message here..."></textarea>
+                        </div>
+
+                        <input type="submit" value="Send Message">
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ---- Hours Banner ---- -->
+        <div class="hours-banner">
+            <h3>Shelter Hours</h3>
+            <div class="hours-grid">
+                <div class="hours-item">
+                    <p><b>Monday - Friday</b></p>
+                    <p>9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="hours-item">
+                    <p><b>Saturday</b></p>
+                    <p>9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="hours-item">
+                    <p><b>Sunday</b></p>
+                    <p>11:00 AM - 4:00 PM</p>
+                </div>
+                <div class="hours-item">
+                    <p><b>Holidays</b></p>
+                    <p>By Appointment Only</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ---- Footer ---- -->
+    <footer>
+        <p>© 2025 PawFect Match &nbsp;|&nbsp; Made with love for animals everywhere</p>
+    </footer>
+
+    <script>
+        // runs when the visitor clicks Send Message
+        function handleSubmit(event) {
+            // stops the page from reloading, which is the default form behavior
+            event.preventDefault();
+
+            // hide the form and show the success message in its place
+            document.getElementById('contact-form').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+        }
+
+        // runs when visitor clicks "Send Another Message"
+        function resetForm() {
+            // wipe all the field values back to blank
+            document.getElementById('contact-form').reset();
+
+            // swap the panels back: hide success, show form
+            document.getElementById('success-message').style.display = 'none';
+            document.getElementById('contact-form').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
