@@ -103,7 +103,12 @@
 
         <script>
             function showText(text) {
-                document.getElementById("display").innerHTML = `<p>${text}</p>`;
+               const box = document.getElementById("display");
+               box.style.display = "inline-block";
+               box.innerHTML = `
+                    <p>${text}</p>
+                    <img src="${imgSrc}" style="max-width: 100%; margin-top: 10px; border-radius: 6px;"> 
+                `;
             }
         </script>
 
