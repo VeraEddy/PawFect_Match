@@ -21,21 +21,21 @@ const pets = {
         },
         sia: {
             images: ["images/IMG_6186.JPG", "images/kiara-2.jpg"],
-            name: "Osito",
+            name: "Sia",
             breed: "Pitbull",
             size: "Medium",
             gender: "Female",
             price: "$450",
-            desc: "Sweet and gentle, Kiara gets along great with kids and loves belly rubs."
+            desc: "Sweet and gentle, Sia gets along great with kids and loves belly rubs."
         },
         osito: {
             images: ["images/IMG_1954.jpg", "images/kiara-2.jpg"],
-            name: "Kiara",
+            name: "Osito",
             breed: "Great Pyrenees",
             size: "Medium",
-            gender: "Female",
+            gender: "Male",
             price: "$450",
-            desc: "Sweet and gentle, Kiara gets along great with kids and loves belly rubs."
+            desc: "Kind and calm, Osito enjoys spending time near people he loves."
         }
     },
     cat: {
@@ -55,7 +55,7 @@ const pets = {
             size: "Small",
             gender: "Female",
             price: "$300",
-            desc: "Calm and loving cat, enjoys sunbathing and cuddles."
+            desc: "Energetic and playful, Kira enjoys staying awake and playing around with her toys."
         },
         susy: {
             images: ["https://www.wondercide.com/cdn/shop/articles/Upside_down_gray_cat.png?v=1685551065", "images/cat2.jpg"],
@@ -64,16 +64,16 @@ const pets = {
             size: "Small",
             gender: "Female",
             price: "$300",
-            desc: "Calm and loving cat, enjoys sunbathing and cuddles."
+            desc: "Calm and loving cat, she enjoys sunbathing and cuddles."
         },
         ken: {
             images: ["https://www.perfect-fit.co.uk/cdn-cgi/image/height=617,f=auto,quality=90/sites/g/files/fnmzdf6431/files/2024-10/selective-focus-closeup-shot-gray-furry-tabby-cat-sitting-wooden-chair_181624-8432_1686748977273.png", "images/cat2.jpg"],
             name: "Ken",
             breed: "Domestic shorthair",
             size: "Small",
-            gender: "Female",
+            gender: "Male",
             price: "$300",
-            desc: "Calm and loving cat, enjoys sunbathing and cuddles."
+            desc: "Full of energy, this lovely cat loves playing and staying active throughout the day."
         },
 
         
@@ -127,7 +127,7 @@ const pets = {
             size: "Medium",
             gender: "Male",
             price: "$500",
-            desc: "Playful and full of energy, Allen loves cuddles and learning new tricks."
+            desc: "Playful and super energetic, Allen loves cuddles and learning new tricks."
 
         },
         karl: {
@@ -169,7 +169,7 @@ const pets = {
             size: "Medium",
             gender: "Male",
             price: "$500",
-            desc: "Playful and full of energy, Lobito loves cuddles and learning new tricks."
+            desc: "Curious and energetic, this bird enjoys exploring and singing throughout the day."
 
         },
         ellen: {
@@ -189,7 +189,7 @@ const pets = {
             size: "Medium",
             gender: "Male",
             price: "$500",
-            desc: "Playful and full of energy, Lobito loves cuddles and learning new tricks."
+            desc: "Energetic and curious, this bird loves to eat and show off its playful personality."
 
         },
         sunflower: {
@@ -199,7 +199,7 @@ const pets = {
             size: "Medium",
             gender: "Male",
             price: "$500",
-            desc: "Playful and full of energy, Lobito loves cuddles and learning new tricks."
+            desc: "A little shy at first, but with patience this bird becomes a sweet and loyal companion."
 
         },
     },
