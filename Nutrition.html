@@ -34,61 +34,55 @@
     </nav>
 
     <main> 
-       <ul class="Animals">
-     <li>
-        <details>
-          <summary><button class="main-btn">Dogs</button></summary>
-          <ul class="sub">
-             <li><button>Large Dogs</button></li>
-             <li><button>Medium Dogs</button></li>
-             <li><button>Small Dogs</button></li>
-          </ul>
-        </details>
-     </li>
-     <li>
-        <details>
-          <summary><button class="main-btn">Cats</button></summary>
-          <ul class="sub">
-             <li><button>Large cats</button></li>
-             <li><button>Medium Cats</button></li>
-             <li><button>small Cats</button></li>
-          </ul>
-        </details>
-     </li>
-     <li>
-        <details>
-          <summary><button class="main-btn">Guinea Pigs</button></summary>
-          <ul class="sub">
-             <li><button>Large Guinea Pig</button></li>
-             <li><button>Medium Guinea Pig</button></li>
-             <li><button>Small Guinea Pig</button></li>
-          </ul>
-        </details>
-     </li>
+        <div class="container">
+            <div class="left">
+                <ul class="menu">
+                    <li>
+                    <details>
+                        <summary><button class="main-btn">Dogs</button></summary>
+                            <ul class="sub">
+                                <li><button onclick="showText('This is the paragraph for Option 1A.')">Large Dog</button></li>
+                                <li><button onclick="showText('This is the paragraph for Option 1B.')">Medium Dog</button></li>
+                                <li><button onclick="showText('This is the paragraph for Option 1C.')">Small Dog</button></li>
+                            </ul>
+                        </details>
+                    </li>
 
-     <li>
-       <details>
-          <summary><button class="main-btn">Rabbits</button></summary>
-          <ul class="sub">
-             <li><button>Large Rabbit</button></li>
-             <li><button>Medium Rabbit</button></li>
-             <li><button>Samll Rabbit</button></li>
-           </ul>
-        </details>
-     </li>
-     <li>
-      <details>
-    
-      <summary><button class="main-btn">Birds</button></summary>
-      <ul class="sub">
-          <li><button>Large Bird</button></li>
-          <li><button>Medium Bird</button></li>
-          <li><button onclick="showText('Paragraph for Option 1C')">Small Bird</button></li>
-        </ul>
-      </details>
-     </li>
+                    <li>
+                    <details>
+                        <summary><button class="main-btn">Cats</button></summary>
+                            <ul class="sub">
+                                <li><button onclick="showText('Paragraph for Option 2A.')">Large Cat</button></li>
+                                <li><button onclick="showText('Paragraph for Option 2B.')">Medium Cat</button></li>
+                                <li><button onclick="showText('Paragraph for Option 2C.')">Small Cat</button></li>
+                            </ul>
+                        </details>
+                    </li>
 
-     </ul>
+                    <li>
+                        <details>
+                              <summary><button class="main-btn">Guinea Pig</button></summary>
+                              <ul class="sub">
+                                 <li><button onclick="showText('Paragraph for Option 3A.')">Large Guinea Pig</button></li>
+                                 <li><button onclick="showText('Paragraph for Option 3B.')">Medium Guinea Pig</button></li>
+                                 <li><button onclick="showText('Paragraph for Option 3C.')">Small Guinea Pig</button></li>
+                            </ul>
+                        </details>
+                     </li>
+                    </ul>
+            </div>
+
+             <div class="right" id="display">
+                 <p>Select an option to see information here.</p>
+            </div>
+        </div>
+
+        <script>
+            function showText(text) {
+                document.getElementById("display").innerHTML = `<p>${text}</p>`;
+            }
+        </script>
+
     </main>
 
      <footer>
