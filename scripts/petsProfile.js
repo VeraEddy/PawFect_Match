@@ -121,7 +121,7 @@ const pets = {
     },
     rabbit: {
         allen: {
-            images: ["images/IMG_5946.jpg", "images/dog1-2.jpg"],
+            images: ["https://articles.hepper.com/wp-content/uploads/2023/05/Rex-Rabbit.jpg "],
             name: "Allen",
             breed: "Rex Rabbit",
             size: "Medium",
@@ -131,7 +131,7 @@ const pets = {
 
         },
         karl: {
-            images: ["images/IMG_5946.jpg", "images/dog1-2.jpg"],
+            images: ["https://upload.wikimedia.org/wikipedia/commons/7/7c/Broken_Castor_Rex_Rabbit.JPG "],
             name: "Karl",
             breed: "Rex Rabbit",
             size: "Medium",
@@ -140,7 +140,7 @@ const pets = {
             desc: "Playful and full of energy, this bunny lives for adventure."
         },
         snowball: {
-            images: ["images/IMG_5946.jpg", "images/dog1-2.jpg"],
+            images: [" https://northernnester.com/wp-content/uploads/2019/10/rex-rabbit-1024x542.jpg"],
             name: "Snowball",
             breed: "Rex Rabbit",
             size: "Medium",
@@ -150,7 +150,7 @@ const pets = {
 
         },
         daisy: {
-            images: ["images/IMG_5946.jpg", "images/dog1-2.jpg"],
+            images: ["https://cottontails-rescue.org.uk/wp-content/uploads/2015/03/Bluebell-7-15.3.15.jpg "],
             name: "Daisy",
             breed: "Rex Rabbit",
             size: "Medium",
@@ -163,7 +163,7 @@ const pets = {
     },
     bird: {
         esme: {
-            images: ["images/IMG_5946.jpg", "images/dog1-2.jpg"],
+            images: ["https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?cs=srgb&dl=pexels-roshan-kamath-793618-1661179.jpg&fm=jpg"],
             name: "Esme",
             breed: "Vernal Hanging Parrot",
             size: "Medium",
@@ -173,7 +173,7 @@ const pets = {
 
         },
         ellen: {
-            images: ["images/IMG_5946.jpg", "images/dog1-2.jpg"],
+            images: ["https://cdn.britannica.com/10/250610-050-BC5CCDAF/Zebra-finch-Taeniopygia-guttata-bird.jpg"],
             name: "Ellen",
             breed: "Zebra Finch",
             size: "Medium",
@@ -183,7 +183,7 @@ const pets = {
 
         },
         pepe: {
-            images: ["images/IMG_5946.jpg", "images/dog1-2.jpg"],
+            images: ["https://www.kaytee.com/-/media/Project/OneWeb/Kaytee/US/learn-care/everything-you-need-to-know-about-pet-cockatiels/everything-you-need-to-know-about-pet-cockatiels.jpg"],
             name: "Pepe",
             breed: "Cockatiel",
             size: "Medium",
@@ -193,7 +193,7 @@ const pets = {
 
         },
         sunflower: {
-            images: ["images/IMG_5946.jpg", "images/dog1-2.jpg"],
+            images: ["https://a-z-animals.com/media/2022/06/Lovebird-in-cage.jpg"],
             name: "Sunflower",
             breed: "yellow colour love bird",
             size: "Medium",
