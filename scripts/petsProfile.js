@@ -36,6 +36,15 @@ const pets = {
             gender: "Male",
             price: "$450",
             desc: "Kind and calm, Osito enjoys spending time near people he loves."
+        },
+        bruno: {
+            images: ["images/dog.jpeg"],
+            name: "Bruno",
+            breed: "Great Pyrenees",
+            size: "Medium",
+            gender: "Male",
+            price: "$450",
+            desc: "Kind and calm, Osito enjoys spending time near people he loves."
         }
     },
     cat: {
