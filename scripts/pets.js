@@ -42,22 +42,12 @@ const pets = [
     },
     {
         name: "Bella",
-        type: "dog",
-        breed: "Husky",
-        age: "18 months",
-        size: "large",
-        gender: "female",
-        img: "https://placedog.net/500/350?id=5",
-        key: "bella-dog"
-    },
-    {
-        name: "Bella",
         type: "cat",
         breed: "Husky",
         age: "18 months",
         size: "large",
         gender: "female",
-        img: "https://placedog.net/500/350?id=5",
+        img: "https://www.perfect-fit.co.uk/cdn-cgi/image/height=617,f=auto,quality=90/sites/g/files/fnmzdf6431/files/2024-10/selective-focus-closeup-shot-gray-furry-tabby-cat-sitting-wooden-chair_181624-8432_1686748977273.png",
         key: "bella-cat"
     }
 ];
@@ -103,9 +93,22 @@ function filterPets() {
     renderPets(filtered);
 }
 
-// Event listeners for filter inputs (example)
+// Event listeners for radio buttons
 const filters = document.querySelectorAll('input[name="type"], input[name="size"]');
 filters.forEach(input => input.addEventListener("change", filterPets));
 
-// Initial render (show all pets)
-renderPets(pets);
+// ----------- NEW PART: auto-filter based on URL ----------- //
+const params = new URLSearchParams(window.location.search);
+const typeFromURL = params.get("type"); // e.g., "dog" or "cat"
+
+if (typeFromURL) {
+    // Check the correct radio button if it exists
+    const radio = document.querySelector(`input[name="type"][value="${typeFromURL}"]`);
+    if (radio) radio.checked = true;
+
+    // Filter pets automatically
+    filterPets();
+} else {
+    // No type in URL? Show all pets
+    renderPets(pets);
+}
