@@ -251,40 +251,82 @@ function renderPets(petArray) {
     });
 }
 
-// Function to filter pets based on selected inputs
+// Function to filter pets based on selected checkboxes
 function filterPets() {
-    const type = document.querySelector('input[name="type"]:checked')?.value;
-    const size = document.querySelector('input[name="size"]:checked')?.value;
-    const gender = document.querySelector('input[name="gender"]:checked')?.value;
-    const price = document.querySelector('input[name="price"]:checked')?.value;
+  // Get all checked checkboxes for each filter category
+  const typeFilters = Array.from(document.querySelectorAll('input[name="type"]:checked')).map(el => el.value);
+  const sizeFilters = Array.from(document.querySelectorAll('input[name="size"]:checked')).map(el => el.value);
+  const genderFilters = Array.from(document.querySelectorAll('input[name="gender"]:checked')).map(el => el.value);
+  const priceFilter = document.querySelector('input[name="price"]:checked')?.value;
 
     let filtered = pets;
 
-    if (type) filtered = filtered.filter(p => p.type === type);
-    if (size) filtered = filtered.filter(p => p.size === size);
-    if (gender) filtered = filtered.filter(p => p.gender === gender);
-    if (price) {filtered = filtered.filter(p => parseInt(p.price) <= parseInt(price));
+  // Filter by type (if any checkboxes are checked)
+  if (typeFilters.length > 0) {
+    filtered = filtered.filter(p => typeFilters.includes(p.type));
 }
 
-    renderPets(filtered);
+  // Filter by size (if any checkboxes are checked)
+  if (sizeFilters.length > 0) {
+    filtered = filtered.filter(p => sizeFilters.includes(p.size));
 }
 
-// Event listeners for radio buttons
-const filters = document.querySelectorAll('input[name="type"], input[name="size"]');
-filters.forEach(input => input.addEventListener("change", filterPets));
+  // Filter by gender (if any checkboxes are checked)
+  if (genderFilters.length > 0) {
+    filtered = filtered.filter(p => genderFilters.includes(p.gender));
+  }
+
+  // Filter by price (single selection, like radio buttons)
+  if (priceFilter) {
+    filtered = filtered.filter(p => parseInt(p.price) <= parseInt(priceFilter));
+  }
+
+  renderPets(filtered);
+}
+// Event listeners for all checkboxes
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+checkboxes.forEach(input => input.addEventListener("change", filterPets));
 
 // ----------- NEW PART: auto-filter based on URL ----------- //
 const params = new URLSearchParams(window.location.search);
-const typeFromURL = params.get("type"); // e.g., "dog" or "cat"
 
-if (typeFromURL) {
-    // Check the correct radio button if it exists
-    const radio = document.querySelector(`input[name="type"][value="${typeFromURL}"]`);
-    if (radio) radio.checked = true;
+// Handle multiple values for checkboxes (e.g., ?type=dog&type=cat)
+const typeFromURL = params.getAll("type"); // Returns array of values
+const sizeFromURL = params.getAll("size");
+const genderFromURL = params.getAll("gender");
+const priceFromURL = params.get("price"); // Single value
 
-    // Filter pets automatically
+// Check checkboxes based on URL params
+if (typeFromURL.length > 0) {
+  typeFromURL.forEach(value => {
+    const checkbox = document.querySelector(`input[name="type"][value="${value}"]`);
+    if (checkbox) checkbox.checked = true;
+  });
+}
+
+if (sizeFromURL.length > 0) {
+  sizeFromURL.forEach(value => {
+    const checkbox = document.querySelector(`input[name="size"][value="${value}"]`);
+    if (checkbox) checkbox.checked = true;
+  });
+}
+
+if (genderFromURL.length > 0) {
+  genderFromURL.forEach(value => {
+    const checkbox = document.querySelector(`input[name="gender"][value="${value}"]`);
+    if (checkbox) checkbox.checked = true;
+  });
+}
+
+if (priceFromURL) {
+  const radio = document.querySelector(`input[name="price"][value="${priceFromURL}"]`);
+  if (radio) radio.checked = true;
+}
+
+// Filter pets automatically if any URL params exist
+if (typeFromURL.length > 0 || sizeFromURL.length > 0 || genderFromURL.length > 0 || priceFromURL) {
     filterPets();
 } else {
-    // No type in URL? Show all pets
+  // No filters in URL? Show all pets
     renderPets(pets);
 }
