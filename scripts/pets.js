@@ -292,6 +292,17 @@ function filterPets() {
     });
 }
 
+  // Get the selected sort option
+  const sortOption = document.querySelector('input[name="sort"]:checked')?.value;
+
+  // Apply sorting if an option is selected
+  if (sortOption === "cheapest") {
+    filtered.sort((a, b) => parseInt(a.price) - parseInt(b.price)); // Ascending (cheapest first)
+  } else if (sortOption === "expensive") {
+    filtered.sort((a, b) => parseInt(b.price) - parseInt(a.price)); // Descending (expensive first)
+  }
+  // "none" or no selection: no sorting (original order)
+
   renderPets(filtered);
 }
 // Event listeners for all checkboxes

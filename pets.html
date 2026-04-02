@@ -42,6 +42,20 @@
 <div class="filter">
         <h3>Filtering</h3>
 
+        <!-- Price Sorting Controls -->
+        <div class="sort-controls">
+          <h4>Sort by Price:</h4>
+          <label>
+            <input type="radio" name="sort" value="cheapest" onchange="filterPets()"> Cheapest First
+          </label>
+          <label>
+            <input type="radio" name="sort" value="expensive" onchange="filterPets()"> Most Expensive First
+          </label>
+          <label>
+            <input type="radio" name="sort" value="none" onchange="filterPets()" checked> No Sorting
+          </label>
+        </div>
+
         <h4>Type of Pet</h4>
         <label><input type="checkbox" name="type" value="dog" onchange="filterPets()"> Dog</label>
         <label><input type="checkbox" name="type" value="cat" onchange="filterPets()"> Cat</label>
