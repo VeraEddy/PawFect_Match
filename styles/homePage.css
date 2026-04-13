@@ -112,6 +112,32 @@ h2 {
     border-radius: 14px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
+/* Slideshow container */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px; /* adjust to match your existing hero-image styling */
+}
+
+/* All slides are stacked on top of each other, hidden by default */
+.slideshow .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Only the active slide is visible */
+.slideshow .slide.active {
+    opacity: 1;
+}
+
 
 /* side-by-side buttons */
 .hero-buttons {
