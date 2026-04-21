@@ -103,34 +103,43 @@ h2 {
     margin: 0 0 28px;
 }
 
-/* hero image styled like a card */
-.hero-image img {
-    width: 320px;
-    max-width: 100%;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+/* Make the hero image container bigger */
+/* Make the hero image container bigger */
+.hero-image {
+    display: flex;
+    flex-direction: column;  /* stacks title on top, slideshow below */
+    align-items: center;
+    width: 40%;
+    height: 400px;
 }
-/* Slideshow container */
+
+/* Slideshow fills the container */
 .slideshow {
     position: relative;
     width: 100%;
     height: 100%;
-    overflow:auto;
-    border-radius: 12px; /* adjust to match your existing hero-image styling */
+    overflow: hidden;
+    border-radius: 12px;
 }
 
-/* All slides are stacked on top of each other, hidden by default */
+/* Fix the images to show fully */
 .slideshow .slide {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+}
+
+/* ADD THIS NEW RULE AT THE BOTTOM */
+.slideshow-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
 }
 
 /* Only the active slide is visible */

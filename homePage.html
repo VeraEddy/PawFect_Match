@@ -50,16 +50,19 @@
         <!-- hero image on the right side -->
         <div class="hero-image">
     <div class="slideshow">
-        <h1 class="slideshow-title">Meet Our Adorable Pets!</h1>
-        <img src="images/dog2.jpeg" alt="Dog waiting for adoption" class="slide active">
-        <img src="images/dog.jpeg" alt="Cat waiting for adoption" class="slide active">
-        <img src="images/dog.jpeg" alt="Rabbit waiting for adoption" class="slide active">
-        <img src="images/dog.jpeg" alt="Bird waiting for adoption" class="slide active">
-        <!-- Add or remove <img> lines to match your actual image files -->
+        <h2 class="slideshow-title">Meet Our Adorable Pets!</h2>
+        <div class="slideshow">
+        <img src="images/Screenshot 2026-04-21 163237.png" alt="Dog waiting for adoption" class="slide active">
+        <img src="images/image.png" alt="Cat waiting for adoption" class="slide">
+        <img src="images/bunny-breeds-netherland-dwarf-66be79bc244f9.avif" alt="Rabbit waiting for adoption" class="slide">
+        <img src="images/guinea pig image.jpg" alt="Guinea Pig waiting for adoption" class="slide">
+        <img src="images/Zebra-finch-Taeniopygia-guttata-bird.webp" alt="Bird waiting for adoption" class="slide">
+        <img src="images/dog2.jpeg" alt="Dog waiting for adoption" class="slide"><!-- Add or remove <img> lines to match your actual image files -->
+        <img src="images/dog.jpeg" alt="Dog waiting for adoption" class="slide">
     </div>
 
-</div>
-</section>
+</div> 
+</section> 
 
     <!-- ---- About Us Section ---- -->
      <div id="bottom"></div>
@@ -113,6 +116,12 @@
     </main>
 
     <!-- ---- Footer ---- -->
+    <footer>
+        <p>© 2025 PawFect Match &nbsp;|&nbsp; Made with ❤️ for animals everywhere</p>
+    </footer>
+
+    <!-- Script goes AFTER footer, BEFORE closing body tag -->
+    <script>
         const slides = document.querySelectorAll('.slideshow .slide');
         let current = 0;
 
@@ -122,9 +131,6 @@
             slides[current].classList.add('active');
         }, 3000);
     </script>
+
 </body>
 </html>
-    <footer>
-        <p>© 2025 PawFect Match &nbsp;|&nbsp; Made with ❤️ for animals everywhere</p>
-    </footer>
-    <script>
