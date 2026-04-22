@@ -174,7 +174,7 @@ h2 {
     color: white;              /* text turns white */
     opacity: 1;
 }
-}
+
 
 /* outline version for secondary action */
 .btn-secondary {
@@ -303,4 +303,28 @@ nav ul li:hover .submenu {
 /* hover effect */
 .submenu li a:hover {
     background: #f2f2f2;
+}
+
+.adoption_review{
+    text-align: center;
+    
+}
+.adoption_review h2 {
+    text-align: center;
+    background-color: skyblue;
+    padding: 10px;
+    
+}
+.review {
+    margin: 90px;
+}
+.review p {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+.top-info {
+    margin-left: auto;
+    padding-right: 1%;
+    text-align: center;
 }

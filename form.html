@@ -10,8 +10,17 @@
     <body>
         <!-- ---- Header (matches form.html header style) ---- -->
     <header>
+        <a href="homePage.html">
         <img src="images/adoptMe.jpeg" alt="PawFect Match logo">
+        </a>
         <h1>PawFect Match</h1>
+
+        <div class="top-info">
+            <h3>Pawfect Match Animal Shelter</h3>
+            <p>4821 Paw Print LaneHouston, TX 77002</p><br>
+            <p>(713) 555-0194</p><br>
+            <p>adopt@pawfectmatch.org</p><br>
+        </div>
     </header>
 
     <!-- ---- the navigation bar (sits below the logo/header) ---- -->
@@ -30,6 +39,7 @@
                 </ul>
             </li>
             <li><a href="form.html" class="active">Adoption Form</a></li>
+            <li><a href="Nutrition.html">Nutrition</a></li>
             <li><a href="aboutUs.html">About Us</a></li>
             <li><a href="Contact_Us.html">Contact Us</a></li>
         </ul>
@@ -47,7 +57,7 @@
             <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required><br><!--when using type make sure to pick the correct one look them up on ChatGpt.-->
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="example@email.com"><br>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required><br>
             
             <label for="address">Address:</label>
             <input type="text" id="address" name="address" placeholder="123 Main St" required><br>
@@ -56,10 +66,10 @@
             
             <p>Are you 18 years or older?</p>
             <label>
-                <input type="radio" name="age" value="yes">Yes
+                <input type="radio" name="age" value="yes" required>Yes
             </label>
             <label>
-                <input type="radio" name="age" value="no">No
+                <input type="radio" name="age" value="no" required>No
             </label>
             <br>
 
