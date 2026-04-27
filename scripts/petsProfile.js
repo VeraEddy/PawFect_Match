@@ -1,4 +1,3 @@
-// ------------------ Pet Data ------------------
 const pets = {
     dog: {
         lobito: {
@@ -83,10 +82,7 @@ const pets = {
             gender: "Male",
             price: "$400",
             desc: "Ken is the strong silent type of the cat world. This distinguished tabby likes to take his time warming up, but once he trusts you, the bond is unbreakable. Ken would do best in a calm household where he can come out of his shell at his own pace. Patient adopters will be rewarded with a deeply loyal and loving companion!"
-        },
-
-        
-        // Add more cats here...
+        },        
     },
     guineapig: {
         ellie: {
@@ -126,7 +122,6 @@ const pets = {
             desc: "Hurley is the most distinguished gentleman in the room — just look at that gorgeous flowing mane! This fluffy, caramel-and-white charmer carries himself with undeniable style and grace. Hurley loves lounging, nibbling on his favorite greens, and soaking up attention from his favorite people. If you're looking for a guinea pig with true star quality, Hurley is ready for his forever home! "
         },
         
-        // Add more rabbits here...
     },
     rabbit: {
         allen: {
@@ -214,17 +209,14 @@ const pets = {
     }
 };
 
-// ------------------ Get type and key from URL ------------------
 const params = new URLSearchParams(window.location.search);
 const type = params.get("type"); // e.g., "dog", "cat", "rabbit"
 const key = params.get("key");   // e.g., "lobito", "whiskers", "hopper"
 
 const pet = pets[type] ? pets[type][key] : null;
 
-// ------------------ Image Index Tracker ------------------
 let index = 0;
 
-// ------------------ Populate Page Dynamically ------------------
 if (pet) {
     const productImage = document.getElementById("productImage");
     const petName = document.getElementById("dogName");
@@ -234,7 +226,6 @@ if (pet) {
     const petPrice = document.getElementById("dogPrice");
     const petDesc = document.getElementById("dogDesc");
 
-    // Initial display
     productImage.src = pet.images[index];
     petName.innerText = pet.name;
     petBreed.innerText = pet.breed;
@@ -243,7 +234,6 @@ if (pet) {
     petPrice.innerText = pet.price;
     petDesc.innerText = pet.desc;
 
-    // ------------------ Next / Previous Image Functions ------------------
     window.nextImage = function() {
         index = (index + 1) % pet.images.length;
         productImage.src = pet.images[index];
@@ -255,13 +245,11 @@ if (pet) {
     }
 
 } else {
-    // If pet not found
     document.querySelector(".description").innerHTML = "<p>Pet not found.</p>";
     const imgElem = document.getElementById("productImage");
     if (imgElem) imgElem.style.display = "none";
 }
 
-// Render pet cards
 function renderPets(filteredPets) {
     const container = document.querySelector('.dog-grid');
     container.innerHTML = '';
@@ -283,7 +271,6 @@ function renderPets(filteredPets) {
     });
 }
 
-// Filter function
 function filterPets() {
     const type = document.querySelector('input[name="type"]:checked')?.value;
     const price = document.querySelector('input[name="price"]:checked')?.value;
@@ -301,5 +288,4 @@ function filterPets() {
     renderPets(filtered);
 }
 
-// Initial render
 renderPets(pets);

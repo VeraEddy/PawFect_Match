@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
 }
-/*this is for moving the filter to the side*/
 .filter {
 float: left;
 width: auto;
@@ -10,13 +9,11 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
-    /* same orange/white gradient used across the whole site */
     background: linear-gradient(to top, orange, white);
     color: #222;
     min-height: 100vh;
 }
 
-/* ---- Header (identical to form.css) ---- */
 header {
     display: flex;
     align-items: center;
@@ -39,7 +36,6 @@ header h1 {
     line-height: 1.2;
 }
 
-/* ---- Navigation Bar ---- */
 nav {
     background: white;
     border-bottom: 1px solid #ddd;
@@ -71,7 +67,6 @@ nav ul li a.active {
     border-bottom-color: orange;
 }
 
-/* ---- Page title & subtitle ---- */
 h2 {
     text-align: center;
     font-size: 28px;
@@ -84,12 +79,10 @@ h2 {
     color: #555;
     margin: 0 0 30px;
 }
-/* ---- Main wrapper ---- */
 main {
     padding: 10px 24px 50px;
 }
 
-/* ---- Filters ---- */
 .filter {
     padding: 20px;
     background-color: #f4f4f4;
@@ -114,7 +107,6 @@ main {
     cursor: pointer;
 }
 
-/* ---- Pet Grid ---- */
 .pet-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -124,7 +116,6 @@ main {
     padding: 0 20px;
 }
 
-/* ---- Pet Card ---- */
 .pet-card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -159,7 +150,6 @@ main {
     margin: 5px 10px;
 }
 
-/* ---- Footer ---- */
 footer {
     background-color: #ff6b6b;
     color: white;
@@ -172,8 +162,6 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* ---- Adopt Me button ---- */
-/* matches the blue/orange submit button from form.css */
 .adopt-btn {
     display: block;
     margin-top: 14px;
@@ -192,7 +180,6 @@ footer p {
     opacity: 0.85;
 }
 
-/* ---- Footer ---- */
 footer {
     text-align: center;
     padding: 20px;
@@ -200,13 +187,10 @@ footer {
     color: #555;
 }
 
-/*this is eddy adding the submenu*/
-/* allow submenu positioning */
 nav ul li {
     position: relative;
 }
 
-/* hide submenu initially */
 .submenu {
     display: none;
     position: absolute;
@@ -221,19 +205,16 @@ nav ul li {
     min-width: 160px;
 }
 
-/* submenu links */
 .submenu li a {
     display: block;
     padding: 10px 15px;
     border-bottom: none;
 }
 
-/* show dropdown on hover */
 nav ul li:hover .submenu {
     display: block;
 }
 
-/* hover effect */
 .submenu li a:hover {
     background: #f2f2f2;
 }

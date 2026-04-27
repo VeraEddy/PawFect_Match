@@ -1,4 +1,5 @@
-*{box-sizing: border-box;}
+*
+{box-sizing: border-box;}
 
 body {
     margin: 0;
@@ -10,7 +11,6 @@ body {
     min-height: 100vh;
 }
 
-/* --- navigation bar ---*/
 nav {
     background: white;
     border-bottom: 1px solid #ddd;
@@ -32,18 +32,16 @@ nav ul li a {
     color: #222;
     font-weight: bold;
     font-size: 15px;
-    border-bottom: 3px solid transparent; /* placeholder for active indicator */
+    border-bottom: 3px solid transparent;
     transition: color 0.2s, border-color 0.2s;
 }
 
-/* highlight the current page link */
 nav ul li a:hover,
 nav ul li a.active {
     color: blue;
     border-bottom-color: orange;
 }
 
-/* ---- Header (copied from form.css so it looks identical) ---- */
 header {
     display: flex;
     align-items: center;
@@ -65,7 +63,7 @@ header h1 {
     font-size: 28px;
     line-height: 1.2;
 }
-/* ---- Section headings ---- */
+
 h2 {
     text-align: center;
     font-size: 26px;
@@ -77,7 +75,6 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
-    /* same gradient as the rest of the site */
     background: linear-gradient(to top, rgb(255, 165, 0), white);
     color: #222;
     min-height: 100vh;
@@ -102,7 +99,6 @@ body {
   flex: 1;
   
   padding: 15px;
-/*  background: #ffffff; */
   background: transparent;
   border-radius: 8px;
   max-width: 700px;
@@ -124,11 +120,11 @@ body {
 
 .info-text {
   font-weight: bold;
-  flex: 1;                /* text takes remaining space */
+  flex: 1;
 }
 
 .info-img {
-  width: 250px;           /* adjust as needed */
+  width: 250px;
   height: auto;
   border-radius: 8px;
 }
@@ -169,8 +165,6 @@ body {
   margin: 4px 0;
 }
 
-  
-
 footer {
     text-align: center;
     padding: 20px;
@@ -178,12 +172,10 @@ footer {
     color: #555;
 }
 
-/* Submenu options*/
 nav ul li {
     position: relative;
 }
 
-/* hide submenu initially */
 .submenu {
     display: none;
     position: absolute;
@@ -198,19 +190,16 @@ nav ul li {
     min-width: 160px;
 }
 
-/* submenu links */
 .submenu li a {
     display: block;
     padding: 10px 15px;
     border-bottom: none;
 }
 
-/* show dropdown on hover */
 nav ul li:hover .submenu {
     display: block;
 }
 
-/* hover effect */
 .submenu li a:hover {
     background: #f2f2f2;
 }
@@ -226,7 +215,7 @@ details summary::-webkit-details-marker {
 }
 
 summary button {
-  all: unset;          /* removes button behavior */
+  all: unset;         
   display: block;
   width: 100%;
   padding: 10px;

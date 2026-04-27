@@ -222,10 +222,9 @@ const pets = [
     }
 ];
 
-// Function to render pets into the grid
 function renderPets(petArray) {
     const grid = document.querySelector(".pet-grid");
-    grid.innerHTML = ""; // Clear current content
+    grid.innerHTML = "";
 
     if (petArray.length === 0) {
         grid.innerHTML = "<p>No pets match the filter.</p>";
@@ -252,7 +251,6 @@ function renderPets(petArray) {
 }
 
 function filterPets() {
-  // Get checked checkboxes for type, gender, price, and age
   const typeFilters = Array.from(document.querySelectorAll('input[name="type"]:checked')).map(el => el.value);
   const genderFilters = Array.from(document.querySelectorAll('input[name="gender"]:checked')).map(el => el.value);
   const priceFilters = Array.from(document.querySelectorAll('input[name="price"]:checked')).map(el => el.value);
@@ -260,17 +258,14 @@ function filterPets() {
 
     let filtered = pets;
 
-  // Filter by type (if any checkboxes are checked)
   if (typeFilters.length > 0) {
     filtered = filtered.filter(p => typeFilters.includes(p.type));
 }
 
-  // Filter by gender (if any checkboxes are checked)
   if (genderFilters.length > 0) {
     filtered = filtered.filter(p => genderFilters.includes(p.gender));
   }
 
-  // Filter by price (exclusive ranges)
   if (priceFilters.length > 0) {
     filtered = filtered.filter(p => {
       const price = parseInt(p.price);
@@ -281,7 +276,6 @@ function filterPets() {
     });
   }
 
-  // Filter by age (exclusive ranges)
   if (ageFilters.length > 0) {
     filtered = filtered.filter(p => {
       const age = parseInt(p.age);
@@ -292,31 +286,25 @@ function filterPets() {
     });
 }
 
-  // Get the selected sort option
   const sortOption = document.querySelector('input[name="sort"]:checked')?.value;
 
-  // Apply sorting if an option is selected
   if (sortOption === "cheapest") {
     filtered.sort((a, b) => parseInt(a.price) - parseInt(b.price)); // Ascending (cheapest first)
   } else if (sortOption === "expensive") {
     filtered.sort((a, b) => parseInt(b.price) - parseInt(a.price)); // Descending (expensive first)
   }
-  // "none" or no selection: no sorting (original order)
 
   renderPets(filtered);
 }
-// Event listeners for all checkboxes
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 checkboxes.forEach(input => input.addEventListener("change", filterPets));
 
-// ----------- Auto-filter based on URL ----------- //
 const params = new URLSearchParams(window.location.search);
 const typeFromURL = params.getAll("type");
 const genderFromURL = params.getAll("gender");
 const priceFromURL = params.getAll("price");
 const ageFromURL = params.getAll("age");
 
-// Check checkboxes based on URL params
 if (typeFromURL.length > 0) {
   typeFromURL.forEach(value => {
     const checkbox = document.querySelector(`input[name="type"][value="${value}"]`);
@@ -345,7 +333,6 @@ if (ageFromURL.length > 0) {
   });
 }
 
-// Filter pets if URL params exist
 if (typeFromURL.length > 0 || genderFromURL.length > 0 || priceFromURL.length > 0 || ageFromURL.length > 0) {
     filterPets();
 } else {

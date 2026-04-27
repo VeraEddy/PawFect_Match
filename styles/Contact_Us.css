@@ -1,9 +1,3 @@
-/* ============================================================
-   Contact_Us.css  --  PawFect Match Contact page
-   Matches the aesthetic from form.css, homePage.css, YourDog.css
-   ============================================================ */
-
-/* ---- Base styles (same across all pages) ---- */
 * {
     box-sizing: border-box;
 }
@@ -17,7 +11,6 @@ body {
     min-height: 100vh;
 }
 
-/* ---- Header (identical to form.css) ---- */
 header {
     display: flex;
     align-items: center;
@@ -40,7 +33,6 @@ header h1 {
     line-height: 1.2;
 }
 
-/* ---- Navigation Bar ---- */
 nav {
     background: white;
     border-bottom: 1px solid #ddd;
@@ -72,7 +64,6 @@ nav ul li a.active {
     border-bottom-color: orange;
 }
 
-/* ---- Page title and subtitle ---- */
 h2 {
     text-align: center;
     font-size: 28px;
@@ -87,23 +78,19 @@ h2 {
     padding: 0 16px;
 }
 
-/* ---- Main wrapper ---- */
 main {
     padding: 10px 24px 50px;
     max-width: 1100px;
     margin: 0 auto;
 }
 
-/* ---- Two-column layout: info cards on left, form on right ---- */
-/* UPDATED: changed align-items to stretch so both columns match height */
 .contact-layout {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
-    align-items: stretch; /* ← UPDATED from flex-start */
+    align-items: stretch;
 }
 
-/* ---- Left column: info cards ---- */
 .info-column {
     display: flex;
     flex-direction: column;
@@ -112,7 +99,6 @@ main {
     min-width: 260px;
 }
 
-/* each contact info block */
 .info-card {
     background: white;
     border-radius: 14px;
@@ -153,8 +139,6 @@ main {
     font-size: 13px !important;
 }
 
-/* ---- Star Rating ---- */
-/* ADDED: all star rating styles */
 .star-rating {
     display: flex;
     gap: 6px;
@@ -203,26 +187,22 @@ main {
     margin-top: 6px;
 }
 
-/* ---- Right column: contact form ---- */
-/* UPDATED: added display flex so form card can stretch */
 .form-column {
     flex: 1.4;
     min-width: 300px;
-    display: flex;            /* ← ADDED */
-    flex-direction: column;   /* ← ADDED */
+    display: flex;
+    flex-direction: column;
 }
 
-/* the white card that wraps the form */
-/* UPDATED: added flex: 1 so it stretches to match info column height */
 .contact-form-card {
     background: white;
     border-radius: 14px;
     border: 1px solid #e6e6e6;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     padding: 28px;
-    flex: 1;                  /* ← ADDED */
-    display: flex;            /* ← ADDED */
-    flex-direction: column;   /* ← ADDED */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-form-card h3 {
@@ -232,7 +212,6 @@ main {
     text-align: center;
 }
 
-/* ---- Form fields ---- */
 .field-group {
     margin-bottom: 16px;
 }
@@ -267,14 +246,12 @@ main {
     box-shadow: 0 0 0 3px rgba(106, 156, 255, 0.25);
 }
 
-/* UPDATED: added flex: 1 so textarea expands to fill remaining space */
 .field-group textarea {
     resize: vertical;
-    flex: 1;                  /* ← ADDED */
-    min-height: 120px;        /* ← ADDED so it never gets too small */
+    flex: 1;
+    min-height: 120px;
 }
 
-/* ---- Submit button ---- */
 input[type="submit"] {
     margin-top: 8px;
     width: 100%;
@@ -293,15 +270,12 @@ input[type="submit"]:hover {
     opacity: 0.85;
 }
 
-/* ---- Form itself stretches inside the card ---- */
-/* ADDED: makes the form fill the card vertically */
 #contact-form {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-/* ---- Shelter Hours Banner ---- */
 .hours-banner {
     margin-top: 30px;
     background: white;
@@ -337,7 +311,6 @@ input[type="submit"]:hover {
     color: #333;
 }
 
-/* ---- Footer ---- */
 footer {
     text-align: center;
     padding: 20px;
@@ -345,7 +318,6 @@ footer {
     color: #555;
 }
 
-/* ---- Success Message Box ---- */
 .success-box {
     text-align: center;
     padding: 30px 20px;
@@ -391,7 +363,6 @@ footer {
     opacity: 0.85;
 }
 
-/* ---- Submenu ---- */
 nav ul li {
     position: relative;
 }
