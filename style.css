@@ -44,13 +44,10 @@ body{
     background-repeat: no-repeat;
     background-attachment:fixed;
 }
-/*this is eddy adding the submenu*/
-/* allow submenu positioning */
 nav ul li {
     position: relative;
 }
 
-/* hide submenu initially */
 .submenu {
     display: none;
     position: absolute;
@@ -65,19 +62,16 @@ nav ul li {
     min-width: 160px;
 }
 
-/* submenu links */
 .submenu li a {
     display: block;
     padding: 10px 15px;
     border-bottom: none;
 }
 
-/* show dropdown on hover */
 nav ul li:hover .submenu {
     display: block;
 }
 
-/* hover effect */
 .submenu li a:hover {
     background: #f2f2f2;
 }

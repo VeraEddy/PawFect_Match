@@ -4,21 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--this names the tab-->
     <title>PawFect Match - Adopt a Dog</title>
     <link rel="stylesheet" href="styles/YourDog.css">
 </head>
 <body>
-
-```
-<!-- ---- Header (matches the rest of the site) ---- -->
 <header>
     <img src="images/adoptMe.jpeg" alt="PawFect Match logo">
     <h1>PawFect Match</h1>
 </header>
 
-<!-- ---- Navigation Bar (sits below the logo/header) ---- -->
-<!-- pages that do not exist yet use # as a placeholder href -->
 <nav>
     <ul>
         <li><a href="homePage.html">Home</a></li>
@@ -38,7 +32,6 @@
         <li><a href="Contact_Us.html">Contact Us</a></li>
     </ul>
 </nav>
-<!--here i will add the filtering-->
     <div class="filter">
         <h3>Filtering</h3>
 
@@ -65,17 +58,11 @@
         <label><input type="radio" name="gender" value="male" onchange="filterPets()"> Male</label>
         <label><input type="radio" name="gender" value="female" onchange="filterPets()"> Female</label>
     </div>
-<!-- ---- Page Title ---- -->
 <h2>Dogs Available for Adoption</h2>
 <p class="subtitle">Find your loyal companion. Every pup below is looking for their forever home.</p>
 
-<!-- ---- Dog Cards Grid ---- -->
-<!-- each dog-card is one dog -->
 <main>
     <div class="dog-grid">
-
-        <!-- ========== ROW 1: your real local photos ========== -->
-
     <div class="dog-card">
     <img src="images/IMG_5946.jpg" alt="Lobito">
     <div class="dog-info">
@@ -100,7 +87,6 @@
 </div>
 
         <div class="dog-card">
-            <!-- note: original file uses .JPG uppercase, keep it exact -->
             <img src="images/IMG_6186.JPG" alt="Sia">
             <div class="dog-info">
                 <h3>SIA</h3>
@@ -122,7 +108,6 @@
             </div>
         </div>
 
-        <!-- ========== ROW 2: the 2 remaining local photos ========== -->
 
         <div class="dog-card">
             <img src="images/dog.jpeg" alt="Bruno">
@@ -145,9 +130,6 @@
                 <a href="petsProfile.html?dog=luna" class="adopt-btn">View Details</a>
             </div>
         </div>
-
-        <!-- ========== ROW 3 onward: online photos from Wikimedia Commons ========== -->
-        <!-- online dog photos from placedog.net (free dog photo service) -->
 
         <div class="dog-card">
             <img src="https://placedog.net/500/350?id=1" alt="Max">
@@ -350,11 +332,8 @@
     </div>
 </main>
 <script src="/scripts/petsProfile.js"></script>
-<!-- ---- Footer ---- -->
 <footer>
     <p>© 2025 PawFect Match &nbsp;|&nbsp; Made with love for animals everywhere</p>
 </footer>
-```
-
 </body>
 </html>
